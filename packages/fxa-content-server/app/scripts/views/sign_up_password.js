@@ -16,6 +16,7 @@ import PasswordStrengthMixin from './mixins/password-strength-mixin';
 import preventDefaultThen from './decorators/prevent_default_then';
 import ServiceMixin from './mixins/service-mixin';
 import SignUpMixin from './mixins/signup-mixin';
+import SignedInNotificationMixin from './mixins/signed-in-notification-mixin';
 import Template from 'templates/sign_up_password.mustache';
 
 const t = msg => msg;
@@ -120,6 +121,7 @@ Cocktail.mixin(
     passwordEl: '#password',
   }),
   ServiceMixin,
+  SignedInNotificationMixin,
   SignUpMixin
 );
 

@@ -18,7 +18,9 @@ import TokenCodeExperimentMixin from './mixins/token-code-experiment-mixin';
 import FlowBeginMixin from './mixins/flow-begin-mixin';
 import FormPrefillMixin from './mixins/form-prefill-mixin';
 import FormView from './form';
+import mailcheck from '../lib/mailcheck';
 import ServiceMixin from './mixins/service-mixin';
+import SignedInNotificationMixin from './mixins/signed-in-notification-mixin';
 import SyncSuggestionMixin from './mixins/sync-suggestion-mixin';
 import Template from 'templates/index.mustache';
 
@@ -30,6 +32,16 @@ class IndexView extends FormView {
   partialTemplates = {
     unsafeFirefoxFamilyHTML: FirefoxFamilyServicesTemplate,
   };
+
+  constructor(options) {
+    super({
+      ...options,
+      events: {
+        ...FormView.prototype.events,
+        'blur input.email': 'checkForCommonDomainMistakes',
+      },
+    });
+  }
 
   get viewName() {
     return 'enter-email';
@@ -130,6 +142,10 @@ class IndexView extends FormView {
       return false;
     }
 
+    if (this._isMailcheckDisplayed()) {
+      return false;
+    }
+
     if (this._isEmailSameAsBouncedEmail()) {
       return false;
     }
@@ -159,6 +175,20 @@ class IndexView extends FormView {
     // "@firefox" or "@firefox.com" email addresses are not valid
     // at this time, therefore block the attempt.
     return /@firefox(\.com)?$/.test(email);
+  }
+
+  _isMailcheckDisplayed() {
+    this.checkForCommonDomainMistakes();
+    if (this.$(EMAIL_SELECTOR).data('mailcheckValue')) {
+      // only block submission the first time the
+      // mailcheck tooltip is displayed.
+      if (!this._mailcheckInvoked) {
+        this._mailcheckInvoked = true;
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
 
   _hasEmailBounced() {
@@ -208,6 +238,10 @@ class IndexView extends FormView {
         this.navigate(nextEndpoint, { account });
       });
   }
+
+  checkForCommonDomainMistakes() {
+    mailcheck(this.$(EMAIL_SELECTOR), this);
+  }
 }
 
 Cocktail.mixin(
@@ -219,6 +253,7 @@ Cocktail.mixin(
   FlowBeginMixin,
   FormPrefillMixin,
   ServiceMixin,
+  SignedInNotificationMixin,
   SyncSuggestionMixin({
     entrypoint: 'fxa:enter_email',
     flowEvent: 'link.signin',
