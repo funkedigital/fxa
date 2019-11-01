@@ -357,7 +357,13 @@ module.exports = {
   },
   SIGNUP_PASSWORD: {
     AGE: '#age',
+    CHOOSE_WHAT_TO_SYNC_HEADER: '#fxa-choose-what-to-sync-header',
     EMAIL: 'input[type=email]',
+    ENGINE_ADDRESSES: '#sync-engine-addresses',
+    ENGINE_BOOKMARKS: '#sync-engine-bookmarks',
+    ENGINE_CREDIT_CARDS: '#sync-engine-creditcards',
+    ENGINE_HISTORY: '#sync-engine-history',
+    ENGINE_PASSWORDS: '#sync-engine-passwords',
     ERROR_PASSWORDS_DO_NOT_MATCH: '.error',
     FIREFOX_FAMILY_SERVICES: '.firefox-family-services',
     HEADER: '#fxa-signup-password-header',

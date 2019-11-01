@@ -4,6 +4,7 @@
 
 import { assign } from 'underscore';
 import AuthErrors from '../lib/auth-errors';
+import CWTSOnSignupPasswordExperimentMixin from './mixins/cwts-on-signup-password-experiment-mixin';
 import Cocktail from 'cocktail';
 import CoppaMixin from './mixins/coppa-mixin';
 import EmailOptInMixin from './mixins/email-opt-in-mixin';
@@ -101,6 +102,7 @@ Cocktail.mixin(
   CoppaMixin({
     required: true,
   }),
+  CWTSOnSignupPasswordExperimentMixin,
   EmailOptInMixin,
   FlowEventsMixin,
   FormPrefillMixin,
