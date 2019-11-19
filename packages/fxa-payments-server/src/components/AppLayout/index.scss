@@ -4,14 +4,14 @@
 // project, so let's use local copies from fxa-content-server for now
 
 #main-content::before {
-  background-image: url('./images/firefox-logo.svg');
+  background-image: url('./images/fmg-logo.svg');
 }
 
 #fxa-settings-header-wrapper {
   flex-direction: column;
 
   #fxa-manage-account {
-    background-image: url('./images/firefox-logo.svg');
+    background-image: url('./images/fmg-logo.svg');
   }
 }
 
