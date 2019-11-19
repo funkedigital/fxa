@@ -9,7 +9,7 @@ if [ -z "$FXA_L10N_SHA" ]; then
     FXA_L10N_SHA="master"
 fi
 
-DOWNLOAD_PATH="https://github.com/mozilla/fxa-content-server-l10n.git"
+DOWNLOAD_PATH="https://github.com/funkedigital/fxa-content-server-l10n.git"
 
 # Download L10N using git
 if [ ! -d "fxa-content-server-l10n" ]; then
