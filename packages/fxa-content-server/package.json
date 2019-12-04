@@ -157,7 +157,7 @@
         "sinon": "4.5.0",
         "upng-js": "2.1.0",
         "webpack-dev-middleware": "3.1.3",
-        "xmlhttprequest": "git://github.com/zaach/node-XMLHttpRequest.git#onerror",
+        "xmlhttprequest": "https://github.com/zaach/node-XMLHttpRequest.git#onerror",
         "yargs": "10.0.3"
     },
     "engines": {
