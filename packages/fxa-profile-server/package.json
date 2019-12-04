@@ -41,7 +41,7 @@
     "audit-filter": "^0.5.0",
     "commander": "2.9.0",
     "eslint-config-prettier": "^5.0.0",
-    "eslint-plugin-fxa": "git://github.com/mozilla/eslint-plugin-fxa.git#41504c9dd30e8b52900c15b524946aa0428aef95",
+    "eslint-plugin-fxa": "https://github.com/mozilla/eslint-plugin-fxa.git#41504c9dd30e8b52900c15b524946aa0428aef95",
     "grunt": "^1.0.4",
     "grunt-copyright": "0.3.0",
     "grunt-eslint": "18.0.0",

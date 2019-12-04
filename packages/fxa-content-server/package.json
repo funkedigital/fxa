@@ -135,7 +135,7 @@
         "css": "2.2.3",
         "eslint": "5.16.0",
         "eslint-config-prettier": "^5.0.0",
-        "eslint-plugin-fxa": "git://github.com/mozilla/eslint-plugin-fxa.git#1153ff4bbf7e2c074363253c555fb7f71bac09a1",
+        "eslint-plugin-fxa": "https://github.com/mozilla/eslint-plugin-fxa.git#1153ff4bbf7e2c074363253c555fb7f71bac09a1",
         "eslint-plugin-sorting": "0.4.1",
         "firefox-profile": "1.2.0",
         "grunt-ban-word": "0.1.1",
