@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "es6-promise": "4.1.1",
-    "sjcl": "git://github.com/bitwiseshiftleft/sjcl.git#a03ea8e",
+    "sjcl": "https://github.com/bitwiseshiftleft/sjcl.git#a03ea8e",
     "xhr2": "0.0.7"
   },
   "devDependencies": {
