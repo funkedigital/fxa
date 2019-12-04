@@ -118,7 +118,7 @@
         "thread-loader": "^2.1.2",
         "time-grunt": "1.4.0",
         "typescript": "^3.5.1",
-        "ua-parser-js": "git://github.com/vladikoff/ua-parser-js.git#fxa-version",
+        "ua-parser-js": "https://github.com/vladikoff/ua-parser-js.git#fxa-version",
         "uglifyjs-webpack-plugin": "1.2.7",
         "underscore": "1.8.3",
         "webpack": "4.16.1",
