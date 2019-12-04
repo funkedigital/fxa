@@ -9,7 +9,7 @@ This project is used by the [Firefox Accounts Auth Server](https://github.com/mo
 
 Clone the git repository and install dependencies:
 
-    git clone git://github.com/mozilla/fxa-customs-server.git
+    git clone https://github.com/mozilla/fxa-customs-server.git
     cd fxa-customs-server
     npm install
 

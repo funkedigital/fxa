@@ -20,7 +20,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/mozilla/fxa.git"
+    "url": "https://github.com/mozilla/fxa.git"
   },
   "engines": {
     "node": ">=10"
