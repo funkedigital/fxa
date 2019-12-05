@@ -16,14 +16,6 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
     </div>
     <footer data-testid="footer">
       <div id="about-moz-footer" data-testid="about-moz-footer">
-        <a
-          id="about-mozilla"
-          rel="author noopener noreferrer"
-          target="_blank"
-          href="https://www.mozilla.org/about/?utm_source=firefox-accounts&amp;utm_medium=Referral"
-        >
-          &nbsp;
-        </a>
       </div>
       <div id="legal-footer" data-testid="legal-footer">
         <a className="terms"
