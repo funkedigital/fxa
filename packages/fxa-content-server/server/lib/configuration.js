@@ -109,7 +109,7 @@ const conf = (module.exports = convict({
   },
   coppa: {
     enabled: {
-      default: true,
+      default: false,
       doc: 'Is the COPPA age check enabled?',
       env: 'COPPA_ENABLED',
       format: Boolean,
