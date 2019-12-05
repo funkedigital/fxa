@@ -47,20 +47,6 @@
 
       {{{ coppaHTML }}}
 
-      <section class="get-involved">
-        {{#isAnyNewsletterEnabled}}
-        <header>
-          <h2>{{#t}}Practical knowledge is coming to your inbox. Sign up for more:{{/t}}</h2>
-        </header>
-        {{/isAnyNewsletterEnabled}}
-
-        {{#newsletters}}
-          <div class="input-row marketing-email-optin-row">
-            <input id="{{slug}}" type="checkbox" class="marketing-email-optin" value="{{slug}}"/><label for="{{slug}}">{{label}}</label>
-          </div>
-        {{/newsletters}}
-      </section>
-
       <div class="button-row">
         <button id="submit-btn" type="submit">{{#t}}Create account{{/t}}</button>
       </div>
