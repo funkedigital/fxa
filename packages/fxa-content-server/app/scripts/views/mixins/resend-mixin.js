@@ -36,7 +36,7 @@ const SHOW_RESEND_IN_MS = new Duration('5m').milliseconds();
 export default function(options = {}) {
   const { successMessage } = _.defaults(options, {
     successMessage: t(
-      'Email resent. Add accounts@firefox.com to your contacts to ensure a smooth delivery.'
+      'Email resent. Add accounts@funkedigital.de to your contacts to ensure a smooth delivery.'
     ),
   });
 
