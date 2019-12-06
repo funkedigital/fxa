@@ -546,7 +546,7 @@ var BaseView = Backbone.View.extend({
    * rendering begins.
    */
   beforeRender() {
-    let sp = getSearchParams();
+    let sp = this.getSearchParams();
     if( sp.branding ){
 
     }
