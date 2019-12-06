@@ -548,7 +548,7 @@ var BaseView = Backbone.View.extend({
    */
   beforeRender() {
     let sp = this.getSearchParams();
-    if( sp.branding && typeof sp.branding !== 'undefined' ){
+    if( sp.branding && sp.branding !== 'undefined' && typeof sp.branding !== 'undefined' ){
       let storage = Storage.factory('sessionStorage');
       storage.set('branding', sp.branding);
     }
