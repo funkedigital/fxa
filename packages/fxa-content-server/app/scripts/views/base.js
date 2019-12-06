@@ -20,6 +20,7 @@ import TimerMixin from './mixins/timer-mixin';
 import Translator from '../lib/translator';
 import VerificationMethods from '../lib/verification-methods';
 import VerificationReasons from '../lib/verification-reasons';
+import Storage from '../lib/storage';
 
 var DEFAULT_TITLE = window.document.title;
 var DEFAULT_HEADER_HEIGHT = 64; // see _settings.scss for details (.settings-success-wrapper)
@@ -548,7 +549,7 @@ var BaseView = Backbone.View.extend({
   beforeRender() {
     let sp = this.getSearchParams();
     if( sp.branding ){
-
+      let storage = Storage.factory();
     }
   },
 
