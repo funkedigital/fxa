@@ -573,7 +573,7 @@ var BaseView = Backbone.View.extend({
   afterVisible() {
     // jQuery 3.x requires the view to be visible
     // before animating the status messages.
-    this.$('#main-content::before').css("background-image", "blah");
+    this.$('#main-content::before').css("background-image", 'url("blah")';
 
     this.displayStatusMessages();
     this.stackWideLinks();
