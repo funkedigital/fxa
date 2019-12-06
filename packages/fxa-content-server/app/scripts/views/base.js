@@ -549,7 +549,7 @@ var BaseView = Backbone.View.extend({
   beforeRender() {
     let sp = this.getSearchParams();
     if( sp.branding ){
-      let storage = Storage.factory();
+      let storage = Storage.factory('localStorage');
       storage.set('branding', sp.branding);
     }
   },
