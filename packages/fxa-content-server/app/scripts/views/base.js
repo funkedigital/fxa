@@ -545,7 +545,12 @@ var BaseView = Backbone.View.extend({
    * rendered. Useful to immediately redirect to another view before
    * rendering begins.
    */
-  beforeRender() {},
+  beforeRender() {
+    let sp = getSearchParams();
+    if( sp.branding ){
+
+    }
+  },
 
   /**
    * Called after the rendering occurs. Can be used to print an
