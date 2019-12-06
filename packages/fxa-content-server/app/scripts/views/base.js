@@ -550,6 +550,7 @@ var BaseView = Backbone.View.extend({
     let sp = this.getSearchParams();
     if( sp.branding ){
       let storage = Storage.factory();
+      storage.set('branding', sp.branding);
     }
   },
 
