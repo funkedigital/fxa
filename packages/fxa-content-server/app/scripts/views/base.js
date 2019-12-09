@@ -565,6 +565,16 @@ var BaseView = Backbone.View.extend({
     return Promise.resolve();
   },
 
+
+  setLogo() {
+    let storage = Storage.factory('sessionStorage');
+    let sp = storage.get('branding');
+    if( !sp || sp === 'undefined' || typeof sp === 'undefined' ){
+      sp = 'fmg';
+    }
+    this.$('#main-content').css('--bgimagebrand','url(/images/funke/' + sp + '-logo.svg)');
+  }
+
   /**
    * Called after the view is visible.
    *
@@ -573,15 +583,7 @@ var BaseView = Backbone.View.extend({
   afterVisible() {
     // jQuery 3.x requires the view to be visible
     // before animating the status messages.
-    // this.$('#main-content::before').css('background-image', 'url(blah)');
-
-    let storage = Storage.factory('sessionStorage');
-    let sp = storage.get('branding');
-    if( !sp || sp === 'undefined' || typeof sp === 'undefined' ){
-      sp = 'fmg';
-    }
-
-    this.$('#main-content').css('--bgimagebrand','url(/images/funke/' + sp + '-logo.svg)');
+    this.setLogo();
     this.displayStatusMessages();
     this.stackWideLinks();
     this.focusAutofocusElement();
