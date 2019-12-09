@@ -574,7 +574,10 @@ var BaseView = Backbone.View.extend({
     // jQuery 3.x requires the view to be visible
     // before animating the status messages.
     // this.$('#main-content::before').css('background-image', 'url(blah)');
-    this.$('#main-content').css('--bgimagebrand','url(blah)');
+
+
+
+    this.$('#main-content').css('--bgimagebrand','url(/images/bmo-logo.svg)');
     this.displayStatusMessages();
     this.stackWideLinks();
     this.focusAutofocusElement();
