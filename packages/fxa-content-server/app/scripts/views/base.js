@@ -573,7 +573,7 @@ var BaseView = Backbone.View.extend({
       sp = 'fmg';
     }
     this.$('#main-content').css('--bgimagebrand','url(/images/funke/' + sp + '-logo.svg)');
-  }
+  },
 
   /**
    * Called after the view is visible.
