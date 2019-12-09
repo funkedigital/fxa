@@ -577,7 +577,7 @@ var BaseView = Backbone.View.extend({
 
 
 
-    this.$('#main-content').css('--bgimagebrand','url(/images/bmo-logo.svg)');
+    this.$('#main-content').css('--bgimagebrand','url(/images/funke/bmo-logo.svg)');
     this.displayStatusMessages();
     this.stackWideLinks();
     this.focusAutofocusElement();
