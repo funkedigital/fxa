@@ -12,7 +12,7 @@
   z-index: $fox-logo-zindex;
 
   @include respond-to('big') {
-    background-size: auto $firefox-standalone-logo-size-large;
+    background-size: auto auto;
     height: $firefox-standalone-logo-size-large;
     margin-top: -$firefox-standalone-logo-size-large;
     opacity: 1 !important; // !important overrides the !important in _branding.scss
@@ -20,7 +20,7 @@
   }
 
   @include respond-to('small') {
-    background-size: auto $firefox-standalone-logo-size-small;
+    background-size: auto auto;
     height: $firefox-standalone-logo-size-small;
     margin-top: -$firefox-standalone-logo-size-small;
     top: 10 + $firefox-standalone-logo-size-small;
