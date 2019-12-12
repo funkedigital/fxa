@@ -15,3 +15,5 @@ docker pull mysql/mysql-server:5.6
 docker pull jdlk7/firestore-emulator
 
 docker pull knarz/pubsub-emulator
+
+docker pull nginx
