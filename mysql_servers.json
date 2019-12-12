@@ -1,6 +1,16 @@
 {
   "apps": [
     {
+      "name": "proxy PORT 80",
+      "script": "_scripts/proxy.sh",
+      "env": {
+        "PORT": "80"
+      },
+      "max_restarts": "1",
+      "min_uptime": "2m",
+      "kill_timeout": 20000
+    },
+    {
       "name": "MySQL server PORT 3306",
       "script": "_scripts/mysql.sh",
       "max_restarts": "1",
