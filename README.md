@@ -1,8 +1,8 @@
 [![pullreminders](https://pullreminders.com/badge.svg)](https://pullreminders.com?ref=badge)
 
-## Firefox Accounts
+## FD Accounts
 
-The Firefox Accounts (fxa) monorepo
+FD SSO / Account System, based on fxa
 
 ### Getting Started
 
