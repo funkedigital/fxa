@@ -14,11 +14,17 @@ function on_sigint() {
 
 trap on_sigint INT
 
-docker run --rm --name fxa_email_service \
+#docker run --rm --name fxa_email_service \
+#  -e NODE_ENV=dev \
+#  -e FXA_EMAIL_ENV=dev \
+#  -e FXA_EMAIL_LOG_LEVEL=debug \
+#  -e RUST_BACKTRACE=1 \
+#  -p 8001:8001 mozilla/fxa-email-service &
+
+cd packages/fxa-email-service && docker build -t fxa-email-service . && docker run --rm --name fxa_email_service \
   -e NODE_ENV=dev \
   -e FXA_EMAIL_ENV=dev \
   -e FXA_EMAIL_LOG_LEVEL=debug \
-  -e RUST_BACKTRACE=1 \
-  -p 8001:8001 mozilla/fxa-email-service &
+  -e RUST_BACKTRACE=1 -p 8001:8001 fxa-email-service &
 
 while :; do read; done
