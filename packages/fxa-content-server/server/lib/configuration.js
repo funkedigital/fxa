@@ -472,7 +472,7 @@ const conf = (module.exports = convict({
     format: 'url',
   },
   public_url: {
-    default: 'http://127.0.0.1:3030',
+    default: 'http://accounts.cloud.funkedigital.de/',
     doc: 'The publically visible URL of the deployment',
     env: 'PUBLIC_URL',
   },
