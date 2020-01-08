@@ -46,7 +46,7 @@ module.exports = function(config) {
   const FB1= 'https://connect.facebook.net';
   const FB2 = 'https://staticxx.facebook.com';
   const FB3 = 'https://www.facebook.com';
-  const GOOGLE1 = 'https://apis.google.com/js/platform.js';
+  const GOOGLE1 = 'https://apis.google.com';
 
   function addCdnRuleIfRequired(target) {
     if (CDN_URL !== PUBLIC_URL) {
