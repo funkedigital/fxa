@@ -69,7 +69,7 @@ module.exports = function(config) {
         FB2,
         FB3,
       ],
-      defaultSrc: [SELF],
+      defaultSrc: [SELF,FB1,FB2,FB3],
       fontSrc: addCdnRuleIfRequired([SELF]),
       imgSrc: addCdnRuleIfRequired([
         SELF,
