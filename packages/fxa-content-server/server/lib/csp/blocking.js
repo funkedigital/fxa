@@ -63,6 +63,7 @@ module.exports = function(config) {
         MARKETING_EMAIL_SERVER,
         PAIRING_SERVER_WEBSOCKET,
         PAIRING_SERVER_HTTP,
+        FB,
       ],
       defaultSrc: [SELF],
       fontSrc: addCdnRuleIfRequired([SELF]),
