@@ -45,7 +45,8 @@ module.exports = function(config) {
   const SELF = "'self'";
   const FB1= 'https://connect.facebook.net';
   const FB2 = 'https://staticxx.facebook.com';
-  const FB3 = 'https://www.facebook.com/';
+  const FB3 = 'https://www.facebook.com';
+  const GOOGLE1 = 'https://apis.google.com/js/platform.js';
 
   function addCdnRuleIfRequired(target) {
     if (CDN_URL !== PUBLIC_URL) {
@@ -68,8 +69,9 @@ module.exports = function(config) {
         FB1,
         FB2,
         FB3,
+        GOOGLE1,
       ],
-      defaultSrc: [SELF,FB1,FB2,FB3],
+      defaultSrc: [SELF,FB1,FB2,FB3,GOOGLE1],
       fontSrc: addCdnRuleIfRequired([SELF]),
       imgSrc: addCdnRuleIfRequired([
         SELF,
@@ -83,7 +85,7 @@ module.exports = function(config) {
       mediaSrc: [BLOB],
       objectSrc: [NONE],
       reportUri: config.get('csp.reportUri'),
-      scriptSrc: addCdnRuleIfRequired([SELF,"'unsafe-inline'",FB1,FB2,FB3]),
+      scriptSrc: addCdnRuleIfRequired([SELF,"'unsafe-inline'",FB1,FB2,FB3,GOOGLE1]),
       styleSrc: addCdnRuleIfRequired([SELF, "'unsafe-inline'"]),
     },
     reportOnly: false,
@@ -107,6 +109,7 @@ module.exports = function(config) {
       FB1,
       FB2,
       FB3,
+      GOOGLE1,
     },
   };
 
