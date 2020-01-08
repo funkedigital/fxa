@@ -98,6 +98,7 @@ module.exports = function(config) {
       PROFILE_SERVER,
       PUBLIC_URL,
       SELF,
+      'https://connect.facebook.net'
     },
   };
 
