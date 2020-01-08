@@ -43,7 +43,7 @@ module.exports = function(config) {
   // keyword sources - https://www.w3.org/TR/CSP2/#keyword_source
   // Note: "'unsafe-inline'" and "'unsafe-eval'" are not used in this module.
   const SELF = "'self'";
-  const FB = "'https://connect.facebook.net'";
+  const FB = 'https://connect.facebook.net';
 
   function addCdnRuleIfRequired(target) {
     if (CDN_URL !== PUBLIC_URL) {
