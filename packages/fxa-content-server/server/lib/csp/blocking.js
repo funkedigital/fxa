@@ -43,7 +43,9 @@ module.exports = function(config) {
   // keyword sources - https://www.w3.org/TR/CSP2/#keyword_source
   // Note: "'unsafe-inline'" and "'unsafe-eval'" are not used in this module.
   const SELF = "'self'";
-  const FB = 'https://connect.facebook.net';
+  const FB1= 'https://connect.facebook.net';
+  const FB2 = 'https://staticxx.facebook.com';
+  const FB3 = 'https://www.facebook.com/';
 
   function addCdnRuleIfRequired(target) {
     if (CDN_URL !== PUBLIC_URL) {
@@ -63,7 +65,9 @@ module.exports = function(config) {
         MARKETING_EMAIL_SERVER,
         PAIRING_SERVER_WEBSOCKET,
         PAIRING_SERVER_HTTP,
-        FB,
+        FB1,
+        FB2,
+        FB3,
       ],
       defaultSrc: [SELF],
       fontSrc: addCdnRuleIfRequired([SELF]),
@@ -79,7 +83,7 @@ module.exports = function(config) {
       mediaSrc: [BLOB],
       objectSrc: [NONE],
       reportUri: config.get('csp.reportUri'),
-      scriptSrc: addCdnRuleIfRequired([SELF,"'unsafe-inline'",FB]),
+      scriptSrc: addCdnRuleIfRequired([SELF,"'unsafe-inline'",FB1,FB2,FB3]),
       styleSrc: addCdnRuleIfRequired([SELF, "'unsafe-inline'"]),
     },
     reportOnly: false,
@@ -100,7 +104,9 @@ module.exports = function(config) {
       PROFILE_SERVER,
       PUBLIC_URL,
       SELF,
-      FB,
+      FB1,
+      FB2,
+      FB3,
     },
   };
 
