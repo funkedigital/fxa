@@ -77,7 +77,7 @@ module.exports = function(config) {
       mediaSrc: [BLOB],
       objectSrc: [NONE],
       reportUri: config.get('csp.reportUri'),
-      scriptSrc: addCdnRuleIfRequired([SELF,'unsafe-inline']),
+      scriptSrc: addCdnRuleIfRequired([SELF,"'unsafe-inline'"]),
       styleSrc: addCdnRuleIfRequired([SELF]),
     },
     reportOnly: false,
