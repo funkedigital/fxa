@@ -80,7 +80,7 @@ module.exports = function(config) {
       objectSrc: [NONE],
       reportUri: config.get('csp.reportUri'),
       scriptSrc: addCdnRuleIfRequired([SELF,"'unsafe-inline'",FB]),
-      styleSrc: addCdnRuleIfRequired([SELF]),
+      styleSrc: addCdnRuleIfRequired([SELF],"'unsafe-inline'"),
     },
     reportOnly: false,
     // Sources are exported for unit tests
