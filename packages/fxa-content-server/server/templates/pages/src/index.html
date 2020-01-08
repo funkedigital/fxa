@@ -31,6 +31,8 @@
         data-flow-begin="{{flowBeginTime}}"
         data-static-resource-host="{{{staticResourceUrl}}}"
     >
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v5.0"></script>
         <div id="loading-spinner">
             <img
                 alt="{{#t}}Loading{{/t}}"
@@ -42,6 +44,7 @@
         </div>
 
         <div id="static-footer">
+            <div class="fb-login-button" data-width="1" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="true"></div>
         </div>
 
         <noscript>
