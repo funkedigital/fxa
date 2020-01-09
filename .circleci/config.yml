@@ -78,7 +78,7 @@ jobs:
                 command: docker pull jdlk7/firestore-emulator && docker run -d --name gcloud-firestore -p 8006:9090 jdlk7/firestore-emulator
             - run:
                 name: Start proxy
-                command: docker pull nginx && docker run -d --name proxy -p 80:80 nginx
+                command: docker pull nginx && docker run -d --name proxy -p 80:80 -p 443:443 nginx
 
       - run: ../../.circleci/build-test-deploy.sh << parameters.test >>
 
