@@ -71,6 +71,7 @@ module.exports = function(config) {
         FB2,
         FB3,
         GOOGLE1,
+        GOOGLE2
       ],
       defaultSrc: [SELF,FB1,FB2,FB3,GOOGLE1,GOOGLE2],
       fontSrc: addCdnRuleIfRequired([SELF]),
